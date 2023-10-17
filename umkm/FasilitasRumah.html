@@ -116,12 +116,23 @@
         <div class="search-kamar mb-5">
             <div class="">
                 <div class="form-group" style="width: 50%; margin: auto;">
-                    <input type="password" id="password" class="form-control"
-                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" placeholder="Cari Kos" value="">
+                    <form id="searchForm" class="form-control" action="pencarianProduk.html" method="GET">
+                        <input style="width: 36rem; border-style: none;" type="text" name="q" id="searchInput" placeholder="Cari sesuatu..." />
+                    </form>
                     <i class="toggle-password bi bi-search"></i>
                 </div>
             </div>
         </div>
+
+        <script>
+            // Mengarahkan ke link setelah menekan "Enter"
+            document.getElementById('searchInput').addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Mencegah pengiriman formulir
+                    window.location.href = document.getElementById('searchForm').action + '?q=' + this.value;
+                }
+            });
+        </script>
 
         <h4>Paling banyak dicari</h4>
 
@@ -222,7 +233,7 @@
                     </div>
                     <p class="fw-semibold fs-5 mb-0" id="nama">${item.nama}</p>
                     <p class="text-muted" id="spesifikasi">${item.spesifikasi}</p>
-                    <div class="Keterangan-Harga float-end" id="harga"><a href="./detailfasilitas.html">Rp. ${item.harga}</a></div>
+                    <div class="Keterangan-Harga float-end" id="harga"><a href="detailProduk.html">Rp. ${item.harga}</a></div>
                 </div>
                 </div>
   `;
