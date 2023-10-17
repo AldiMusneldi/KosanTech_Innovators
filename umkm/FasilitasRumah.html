@@ -83,10 +83,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     <li class="nav-item active">
-                        <a class="nav-link link fw-semibold" href="#">Home</a>
+                        <a class="nav-link link fw-semibold" href="/index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link fw-semibold" href="#">Cari Kos</a>
+                        <a class="nav-link link fw-semibold" href="/kost/kost.html">Cari Kos</a>
                     </li>
                     <li class="nav-item dropdown">
                         <div class="dropdown">
@@ -126,55 +126,20 @@
         <h4>Paling banyak dicari</h4>
 
         <div class="row mt-5">
-            <div id="data-fasilitas" class="row">
+            <div id="fasilitasPopuler" class="row">
+                <!-- Kartu-kartu akan ditampilkan di sini oleh JavaScript -->
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div id="fasilitasRumah" class="row">
                 <!-- Kartu-kartu akan ditampilkan di sini oleh JavaScript -->
             </div>
         </div>
     </main>
 
 
-    <footer class=" mt-5" style="background-color: #749BC2; height: 250px;">
-        <div class="container ">
-            <div class="row pt-5">
-                <div class="col-3">
-                    <div class="text-left">
-                        <a href=""> <img width="140" src="../assets/images/Logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <h4 class="text-white">Kebijakan</h4>
-                    <div class="mt-3">
-                        <a class="text-decoration-none text-white d-block" href="">Kebijakan Privasi</a>
-                        <a class="text-decoration-none text-white d-block mt-2" href="">Syarat dan Ketentuan Umum</a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <h4 class="text-white">Akun</h4>
-                    <div class="mt-3">
-                        <a class="text-decoration-none text-white d-block" href="">Akun Saya</a>
-                        <a class="text-decoration-none text-white d-block mt-2" href="">Lupa Sandi</a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <h4 class="text-white">Hubungi Kami</h4>
-                    <div class="mt-3">
-                        <a class="text-decoration-none text-white d-block" href="">myAccount@gmail.com</a>
-                        <a class="text-decoration-none text-white d-block mt-2" href="">081216161941</a>
-                    </div>
-                    <div class="d-inline mt-1">
-                        <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-facebook"></i></a>
-                        <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-twitter"></i></a>
-                        <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-instagram"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-3">
-                <p class="text-center fs-5"><i class="bi bi-c-circle"></i> Copyright KosanTechInnovators 2023. All right
-                    reserved</p>
-            </div>
-        </div>
-        </div>
-    </footer>
+
 
     <script>
         const jsonData = {
@@ -197,31 +162,102 @@
                     "spesifikasi": "Ukuran 180 cm X 75 cm",
                     "harga": 200000
                 }
+            ],
+
+            "populer": [
+                {
+                    "id": 1,
+                    "nama": "Meja Belajar",
+                    "display": "1rb Produk",
+                },
+                {
+                    "id": 2,
+                    "nama": "Kursi Belajar",
+                    "display": "1rb Produk",
+                },
+                {
+                    "id": 3,
+                    "nama": "Kompor",
+                    "display": "1rb Produk",
+                }
             ]
         };
 
-        const container = document.getElementById("data-fasilitas"); // Gantilah "container" dengan ID dari elemen HTML tempat Anda ingin menambahkan data.
+        const container = document.getElementById("fasilitasPopuler"); // Gantilah "container" dengan ID dari elemen HTML tempat Anda ingin menambahkan data.
+        const container1 = document.getElementById("fasilitasRumah"); // Gantilah "container" dengan ID dari elemen HTML tempat Anda ingin menambahkan data.
+
+        jsonData.populer.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "col-4 ";
+            card.innerHTML = `    
+                <div class="row g-0 border border-dark" style="width: 20rem; border-radius: 10px;">
+                    <div class="col-md-4">
+                        <img style="padding: 8px;" src="../assets/images/fasilitasRumah/populer/populer${item.id}.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body" style="text-align: center; padding: 20px;">
+                            <p class="fw-semibold fs-5 mb-0" id="nama">${item.nama}</p>
+                            <p class="text-muted" id="spesifikasi">${item.display}</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div style="padding: 2rem;"></div>
+            
+
+  `;
+
+            container.appendChild(card);
+        });
 
         jsonData.fasilitas.forEach(item => {
             const card = document.createElement("div");
             card.className = "col-4 ";
             card.innerHTML = `
-    <div class="card mb-4 border border-dark" style="width: 25rem; border-radius: 10px;">
-      <img style="padding: 8px;" src="../assets/images/RekomendasiFasilitas${item.id}.png" alt="" class="card-img-top">
-      <div class="card-body">
-        <div class="d-flex align-items-center justify-content-between">
-          <p class="d-inline float-end"></p>
-        </div>
-        <p class="fw-semibold fs-5 mb-0" id="nama">${item.nama}</p>
-        <p class="text-muted" id="spesifikasi">${item.spesifikasi}</p>
-        <div class="Keterangan-Harga float-end" id="harga"><a href="./detailfasilitas.html">Rp. ${item.harga}</a></div>
-      </div>
-    </div>
+                <div class="card mb-4 border border-dark" style="width: 25rem; border-radius: 10px;">
+                <img style="padding: 8px;" src="../assets/images/fasilitasRumah/RekomendasiFasilitas${item.id}.png" alt="" class="card-img-top">
+                <div class="card-body">
+                    <div class="d-flex align-items-center justify-content-between">
+                    <p class="d-inline float-end"></p>
+                    </div>
+                    <p class="fw-semibold fs-5 mb-0" id="nama">${item.nama}</p>
+                    <p class="text-muted" id="spesifikasi">${item.spesifikasi}</p>
+                    <div class="Keterangan-Harga float-end" id="harga"><a href="./detailfasilitas.html">Rp. ${item.harga}</a></div>
+                </div>
+                </div>
   `;
 
             container.appendChild(card);
         });
     </script>
+
+        <style>
+            .dot-container {
+            text-align: center;
+            }
+        
+            .dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+            }
+        
+            .active-dot {
+            background-color: darkblue;
+            }
+        
+            .inactive-dot {
+            background-color: lightblue;
+            }
+        </style>
+        
+        <div class="dot-container">
+            <div class="dot active-dot"></div>
+            <div class="dot inactive-dot"></div>
+            <div class="dot inactive-dot"></div>
+        </div>
 
     <!--------------------------- function LIKE ----------------------------------->
     <script>
@@ -248,5 +284,46 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
 </body>
-
+<footer class=" mt-5" style="background-color: #749BC2; height: 250px;">
+    <div class="container ">
+        <div class="row pt-5">
+            <div class="col-3">
+                <div class="text-left">
+                    <a href=""> <img width="140" src="../assets/images/Logo.png" alt=""></a>
+                </div>
+            </div>
+            <div class="col-3">
+                <h4 class="text-white">Kebijakan</h4>
+                <div class="mt-3">
+                    <a class="text-decoration-none text-white d-block" href="">Kebijakan Privasi</a>
+                    <a class="text-decoration-none text-white d-block mt-2" href="">Syarat dan Ketentuan Umum</a>
+                </div>
+            </div>
+            <div class="col-3">
+                <h4 class="text-white">Akun</h4>
+                <div class="mt-3">
+                    <a class="text-decoration-none text-white d-block" href="">Akun Saya</a>
+                    <a class="text-decoration-none text-white d-block mt-2" href="">Lupa Sandi</a>
+                </div>
+            </div>
+            <div class="col-3">
+                <h4 class="text-white">Hubungi Kami</h4>
+                <div class="mt-3">
+                    <a class="text-decoration-none text-white d-block" href="">myAccount@gmail.com</a>
+                    <a class="text-decoration-none text-white d-block mt-2" href="">081216161941</a>
+                </div>
+                <div class="d-inline mt-1">
+                    <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-facebook"></i></a>
+                    <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-twitter"></i></a>
+                    <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3">
+            <p class="text-center fs-5"><i class="bi bi-c-circle"></i> Copyright KosanTechInnovators 2023. All right
+                reserved</p>
+        </div>
+    </div>
+    </div>
+</footer>
 </html>
