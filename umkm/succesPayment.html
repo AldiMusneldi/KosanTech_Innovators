@@ -83,10 +83,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     <li class="nav-item active">
-                        <a class="nav-link link fw-semibold" href="/index.html">Home</a>
+                        <a class="nav-link link fw-semibold" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link fw-semibold" href="/kost/kost.html">Cari Kos</a>
+                        <a class="nav-link link fw-semibold" href="#">Cari Kos</a>
                     </li>
                     <li class="nav-item dropdown">
                         <div class="dropdown">
@@ -112,24 +112,103 @@
     </nav>
 
     <main>
-
-        <div class="search-kamar mb-5">
-            <div class="">
-                <div class="form-group" style="width: 50%; margin: auto;">
-                    <input type="password" id="password" class="form-control"
-                        style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" placeholder="Cari Kos" value="">
-                    <i class="toggle-password bi bi-search"></i>
-                </div>
-            </div>
+        <div class="text-center">
+            <h2 class="fw-bold">Success</h2>
+            <img src="../assets/images/succesPayment.png" alt="">
+            <h3 class="fw-semibold">Success</h3>
+            <p class="fs-5">12 April 2023, 19:30</p>
         </div>
 
-        <div class="row mt-5">
-            <div id="dataProduk" class="row">
-                <!-- Kartu-kartu akan ditampilkan di sini oleh JavaScript -->
-            </div>
+
+        <div class="col-12 d-flex justify-content-center">
+            <table class="" width="1000">
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">Pembayaran Ke</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4"> hedwynbusyaery</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">Lokasi Kos</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4"> Jakarta</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">Metode Pembayaran</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">Gopay</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">Total Pembayaran</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">Rp.3.400.000</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0"
+                    style="background-color: #91C8E4;">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">Rincian Referensi</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">No. Transaksi</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">000155874564455211</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">No. Referensi</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">000248548521164258</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">RRN</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">0012144554112544</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">PAN Restoran</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">9311554256522264488</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2 border-bottom-0">
+                    <td>
+                        <p class="fw-semibold my-auto p-3 fs-4">PAN Pelanggan</p>
+                    </td>
+                    <td>
+                        <p class="fw-bold my-auto p-3 fs-4">93111564845654154745</p>
+                    </td>
+                </tr>
+                <tr class="d-flex justify-content-between border border-info border-2">
+                    <td class="mx-auto my-5">
+                        <button class="button" style="padding: 25px 50px; border: none; border-radius: 20px;"><a
+                                href="../index1.html" class="text-white">Kembali</a></button>
+                    </td>
+                </tr>
+            </table>
         </div>
     </main>
-
 
     <footer class=" mt-5" style="background-color: #749BC2; height: 250px;">
         <div class="container ">
@@ -174,112 +253,6 @@
         </div>
     </footer>
 
-    <script>
-        const jsonData = {
-            "produk": [
-                {
-                    "id": 1,
-                    "nama": "Kasur Kantong Pegas",
-                    "spesifikasi": "90cmX200cmX24cm",
-                    "harga": 895000
-                },
-                {
-                    "id": 2,
-                    "nama": "Rice Cooker Magic",
-                    "spesifikasi": "Daya listrik 395 Watt",
-                    "harga": 395000
-                },
-                {
-                    "id": 3,
-                    "nama": "Keranjang Baju",
-                    "spesifikasi": "27cmX15cmX10cm",
-                    "harga": 25000
-                },
-                {
-                    "id": 4,
-                    "nama": "Mesin Cuci",
-                    "spesifikasi": "2 Tabung, 360 Watt",
-                    "harga": 995000
-                },
-                {
-                    "id": 5,
-                    "nama": "Meja Belajar",
-                    "spesifikasi": "180cm X 75cm",
-                    "harga": 200000
-                },
-                {
-                    "id": 6,
-                    "nama": "AC Sharp 1 PK Standar",
-                    "spesifikasi": "1 PK, 700 Watt",
-                    "harga": 3395000
-                },
-                {
-                    "id": 7,
-                    "nama": "Kompor Listrik ES-155",
-                    "spesifikasi": "1000 Watt, Alumunium",
-                    "harga": 270000
-                },
-                {
-                    "id": 8,
-                    "nama": "Kipas Haiwa",
-                    "spesifikasi": "4 Baling, 70 Watt",
-                    "harga": 100000
-                },
-                {
-                    "id": 9,
-                    "nama": "Buku Tulis",
-                    "spesifikasi": "U 27 cm X 30 cm",
-                    "harga": 395000
-                },
-                {
-                    "id": 10,
-                    "nama": "Kertas HVS",
-                    "spesifikasi": "U A4",
-                    "harga": 395000
-                }
-            ]
-        };
-
-        const container = document.getElementById("dataProduk"); // Gantilah "container" dengan ID dari elemen HTML tempat Anda ingin menambahkan data.
-
-        jsonData.produk.forEach(item => {
-            const card = document.createElement("div");
-            card.className = "col-2 ";
-            card.innerHTML = `
-            <div class="card mb-4 border border-dark" style="width: 180px; border-radius: 10px;">
-            <img style="padding: 8px;" src="../assets/images/fasilitasRumah/produk/produk${item.id}.png" alt="" class="card-img-top">
-            <div class="card-body">
-                <div class="d-flex align-items-center justify-content-between">
-                </div>
-                <p class="fw-semibold mb-0" style="font-size: 13px;" id="nama">${item.nama}</p>
-                <p class="text-muted" style="font-size: 13px;" id="spesifikasi">${item.spesifikasi}</p>
-                <div class="Keterangan-Harga float-end" id="harga"><a href="detailProduk.html">Rp. ${item.harga}</a></div>
-            </div>
-            </div>
-  `;
-
-            container.appendChild(card);
-        });
-    </script>
-
-    <!--------------------------- function LIKE ----------------------------------->
-    <script>
-        function like(button) {
-            var image = button.querySelector("img");
-
-            // Cek jika gambar saat ini adalah loveRed
-            if (image.src.endsWith("loveEmpyty.svg")) {
-                // Ganti gambar ke loveWhite
-                image.src = "../assets/icons/loveRed.svg";
-            } else {
-                // Ganti gambar kembali ke loveRed (jika sebelumnya loveWhite)
-                image.src = "../assets/icons/loveEmpyty.svg";
-            }
-        }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
