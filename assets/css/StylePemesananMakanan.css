@@ -1,0 +1,56 @@
+.Box-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.Box-2{
+    display: flex;
+    width: 1278px;
+    height: 402px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px; 
+}
+
+.Box-3{
+    display: flex;
+    padding: 0px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 17px;
+    border-radius: 10px;
+    border: 1px solid #000;
+}
+
+.Box-4{
+    margin-top: 10px;
+    display: flex;
+    padding: 0px 5px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.Box-5 button{
+    background-color: transparent;
+    border: 0px;
+    margin-bottom: 10px;
+}
+
+.Box-unit{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;border-radius: 10px;
+    background: var(--Light-Blue, #91C8E4);
+}
+
+.Box-keranjang1{
+    width: 1440px;
+    background: var(--White, #FFF);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
