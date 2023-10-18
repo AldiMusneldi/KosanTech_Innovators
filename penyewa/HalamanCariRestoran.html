@@ -14,51 +14,54 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-        <div class="container-fluid">
-           <div class="ms-4 d-flex">
-              <img class="ms-5" src="../assets/icons/Logo.svg" width="53" height="51" alt="">
-              <a class="nav-link link link ms-3 mt-1" href="index.html"><span class="fw-bold"
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container-fluid">
+        <div class="ms-4 d-flex">
+            <img class="ms-5" src="../assets/icons/Logo.svg" width="53" height="51" alt="">
+            <a class="nav-link link link ms-3 mt-1" href="index.html"><span class="fw-bold"
                     style="color:#4682A9;">KosanTech</span><span class="fw-semibold" style="color:#749BC2;">
                     Innovators</span>
-              </a>
-           </div>
-  
-           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-                 <li class="nav-item">
-                    <a class="nav-link link fw-semibold" href="#">Cari Kos</a>
-                 </li>
-                 <li class="nav-item dropdown">
-                    <div class="dropdown">
-                       <a class=" nav-link fw-semibold link dropdown-toggle" type="button" id="layanan"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          <span> Makanan</span>
-                       </a>
-                       <ul class="dropdown-menu" aria-labelledby="layanan">
-                          <li><a class="dropdown-item link" href="#">Fasilitas Rumah</a></li>
-                          <li><a class="dropdown-item link" href="#">Makanan</a></li>
-                       </ul>
-                    </div>
-                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link link fw-semibold" href="#">Contact</a>
-                 </li>
-              </ul>
-              <form class="d-flex me-5">
-                 <a class="login" href="../LoginTo.html">Masuk</a>
-              </form>
-           </div>
+            </a>
         </div>
-     </nav>
 
-    <div style="margin-top: 6%;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                <li class="nav-item active">
+                    <a class="nav-link link fw-semibold" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link fw-semibold" href="#">Cari Kos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <div class="dropdown">
+                        <a class=" nav-link fw-semibold link dropdown-toggle" type="button" id="layanan"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span> Layanan Kami</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="layanan">
+                            <li><a class="dropdown-item link" href="#">Fasilitas Rumah</a></li>
+                            <li><a class="dropdown-item link" href="#">Makanan</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link link fw-semibold" href="#">Kontak</a>
+                </li>
+            </ul>
+            <form class="d-flex ms-5 me-5">
+                <a class="" href="./profilPenyewa.html"><i class="fs-3 bi bi-person"></i></a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+    <div style="margin-top: 120px;">
       <div class="search-kamar mb-5">
         <div class="">
             <div class="form-group" style=" width: 50% ; margin: auto; display: flex; justify-content: center; align-items: center;">
                 <input type="password" id="password" class="form-control"
                     style="box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); width: 500px;
-                    height: 36px;" placeholder="Cari Kos" value="">
+                    height: 36px;" placeholder="Cari Restoran" value="">
                 <i class="toggle-password bi bi-search" style="margin-left: -4%;"></i>
             </div>
         </div>
@@ -93,14 +96,16 @@
               <select selected class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <option selected>Terdekat</option>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <option class="dropdown-item" href="#" >Terbaik</option>
+                  <option class="dropdown-item" href="#" >Terjauh</option>
                 </div>
               </select>
             </div>
           </div>
         </div>
      </div>
-
+    
+  <div style="width: 100%; height: 100%;  display: flex;justify-content: center;margin-top: 50px;
+  align-items: center;">
      <div class="Box-Restoran">
       <div class="Box-1">
         <div class="Box-2">
@@ -157,7 +162,10 @@
         </div>
       </div>
     </div>
+  </div>
 
+  <div style="width: 100%; display: flex;justify-content: center;margin-top: 50px;
+  align-items: center;">
     <div class="Box-Restoran">
       <div class="Box-1">
         <div class="Box-2">
@@ -214,6 +222,7 @@
         </div>
       </div>
     </div>
+  </div>
 
      <footer class=" mt-5" style="background-color: #749BC2; height: 250px;">
         <div class="container ">
