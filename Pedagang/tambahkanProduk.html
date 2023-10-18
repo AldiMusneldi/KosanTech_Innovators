@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tambahkan Produk</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -49,17 +49,19 @@
             height: 32px;
         }
 
-        .list-group .list-group-item-action.active{
+        .list-group .list-group-item-action.active {
             background-color: #7ad7ff;
         }
-        .list-group .list-group-item-action:hover{
+
+        .list-group .list-group-item-action:hover {
             background-color: #7ad7ff !important;
         }
 
-        .nav-item .nav-link.active{
+        .nav-item .nav-link.active {
             background-color: #7ad7ff;
         }
-        .nav-item .nav-link:hover{
+
+        .nav-item .nav-link:hover {
             background-color: #7ad7ff;
         }
     </style>
@@ -67,7 +69,7 @@
         <div class="container-fluid">
             <div class="ms-4 d-flex">
                 <img class="ms-5" src="../assets/icons/Logo.svg" width="53" height="51" alt="">
-                <a class="nav-link link link ms-3 mt-1" href="../index.html"><span class="fw-bold"
+                <a class="nav-link link link ms-3 mt-1" href="index.html"><span class="fw-bold"
                         style="color:#4682A9;">KosanTech</span><span class="fw-semibold" style="color:#749BC2;">
                         Innovators</span>
                 </a>
@@ -76,18 +78,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
                     <li class="nav-item active">
-                        <a class="nav-link link fw-semibold" href="#">Cari Kos</a>
+                        <a class="nav-link link fw-semibold" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link fw-semibold" href="#">Pedagang</a>
+                        <a class="nav-link link fw-semibold" href="#">Cari Kos</a>
                     </li>
-                    
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a class=" nav-link fw-semibold link dropdown-toggle" type="button" id="layanan"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span> Layanan Kami</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="layanan">
+                                <li><a class="dropdown-item link" href="#">Fasilitas Rumah</a></li>
+                                <li><a class="dropdown-item link" href="#">Makanan</a></li>
+                            </ul>
+                        </div>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link link fw-semibold" href="#">Kontak</a>
                     </li>
                 </ul>
                 <form class="d-flex ms-5 me-5">
-                    <a class="" href="./profilPenyewa.html"><i class="fs-3 bi bi-person"></i></a>
+                    <a class="" href="./dashboardPemilik.html"><i class="fs-3 bi bi-person"></i></a>
                 </form>
             </div>
         </div>
@@ -98,58 +111,75 @@
         <section class="row">
             <div class="col-3">
                 <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-                        Toko Saya
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">Tambahkan Produk</a>
-                    <a href="#" class="list-group-item list-group-item-action">Fitur Promosi</a>
-                    <a href="#" class="list-group-item list-group-item-action">Laporan Statistik</a>
-                    <a href="#" class="list-group-item list-group-item-action">Profil </a>
-
+                    <a href="./dashboardPedagang.html" class="list-group-item list-group-item-action"
+                    aria-current="true">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a href="./tambahkanProduk.html" class="list-group-item list-group-item-action active"><i
+                        class="bi bi-building-add"></i> Tambahkan Produk</a>
+                <a href="./profilPedagang.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-person-badge"></i> Profile</a>
+                <a href="../index.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-box-arrow-left"></i> Logout</a>
                 </div>
             </div>
 
-            <div class="col-7">
-                <div class="" style="text-align: left;">
-                    <h3>Tambahkan Produk Anda</h3><br>  
-                    <h4>Lengkapi Informasi Produk Anda</h4>
-                </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <h6>foto Produk</h6>
-                            <div class="" style="align-items: center;">
-                            <img src="../assets/images/nasi.png" alt="" >
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="fw-bold text-uppercase">
+                            TAMBAHKAN PRODUK ANDA
+                        </h3>
+                        <h4 class="mt-3">Lengkapi Data Kost Anda</h4>
+
+                        <form class="mt-5">
+                            <h4>Foto Produk</h4>
+                            <img src="/assets/images/fasilitasRumah/produk/produk2.png" alt="">
+                            <div class="mb-3">
+                                <label for="namaProduk" class="form-label">Nama Produk <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hargaProduk">
                             </div>
-                            <div class="" style="margin-top: 10px;">
-                                <p>Nama Produk</p>
-                                <div class="card col-sm-12">
-                                    <div class="card-body">
-                                        Rice Cooker
-                                    </div>
-                                  </div>
-                            <div class="" style="margin-top: 10px;">
-                                <p>Kategori</p>
-                                <div class="card col-sm-12">
-                                <div class="card-body">
-                                        Penanak Nasi
-                                    </div>
-                                </div>        
-                            <div class="" style="margin-top: 10px;">
-                                <p>Deskripsi</p>
-                                <div class="card col-sm-12">
-                                <div class="card-body">
-                                        Rice Cooker adalah perangkat elektrik yang dirancang khusus untuk memasak nasi dengan praktis dan mudah. Perangkat ini bekerja dengan cara mengukus nasi dalam air hingga mencapai konsistensi yang sempurna, dan sering dilengkapi dengan fitur-fitur tambahan seperti timer otomatis, penghangat, dan pengatur suhu, menjadikannya alat yang sangat populer di berbagai negara, terutama di Asia, di mana nasi adalah makanan pokok.
-                                    </div>
-                                </div>        
-                        </div>
-                    </div>
-            </div>
-           
-            
+                            <div class="mb-3">
+                                <label for="kategoriProduk" class="form-label">Kategori <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hargaProduk">
+                            </div>
+                            <div class="mb-3">
+                                <label for="deskripsiProduk" class="form-label">Deskripsi <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" name="" id="" cols="30" rows="10"></textarea>
+                            </div>
 
-            
+                            <div >
+                                
+                            </div>
+                            </div>
+
+                            <div class=" mb-3">
+                                <label for="informasiPenjualan" class="form-label mt-3" style="font-size: 25px;"><b>Informasi Penjualan</b></label>
+                                <br>
+                                <label for="variasiProduk" class="form-label">variasi <span
+                                    class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hargaProduk">
+                                <br>
+                                <label for="hargaProduk" class="form-label">Harga <span
+                                    class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hargaProduk">
+                                <br>
+                                <label for="stockProduk" class="form-label">Stock <span
+                                    class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hargaProduk">
+                            </div>
+
+                            <button type="submit" class="button px-3" style="padding-top: 13px; padding-bottom: 13px; font-size: 16px; border: none; background-color: #749BC2 !important;">Tambahkan Produk Anda</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            </div>
         </section>
-        
     </main>
 
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Profil Pedagang</title>
+    <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/css/style.css" />
@@ -49,17 +49,19 @@
             height: 32px;
         }
 
-        .list-group .list-group-item-action.active{
+        .list-group .list-group-item-action.active {
             background-color: #7ad7ff;
         }
-        .list-group .list-group-item-action:hover{
+
+        .list-group .list-group-item-action:hover {
             background-color: #7ad7ff !important;
         }
 
-        .nav-item .nav-link.active{
+        .nav-item .nav-link.active {
             background-color: #7ad7ff;
         }
-        .nav-item .nav-link:hover{
+
+        .nav-item .nav-link:hover {
             background-color: #7ad7ff;
         }
     </style>
@@ -67,7 +69,7 @@
         <div class="container-fluid">
             <div class="ms-4 d-flex">
                 <img class="ms-5" src="../assets/icons/Logo.svg" width="53" height="51" alt="">
-                <a class="nav-link link link ms-3 mt-1" href="../index.html"><span class="fw-bold"
+                <a class="nav-link link link ms-3 mt-1" href="index.html"><span class="fw-bold"
                         style="color:#4682A9;">KosanTech</span><span class="fw-semibold" style="color:#749BC2;">
                         Innovators</span>
                 </a>
@@ -98,7 +100,7 @@
                     </li>
                 </ul>
                 <form class="d-flex ms-5 me-5">
-                    <a class="" href="./profilPenyewa.html"><i class="fs-3 bi bi-person"></i></a>
+                    <a class="" href="./dashboardPemilik.html"><i class="fs-3 bi bi-person"></i></a>
                 </form>
             </div>
         </div>
@@ -109,81 +111,116 @@
         <section class="row">
             <div class="col-3">
                 <div class="list-group">
-                    <a href="./profilPenyewa.html" class="list-group-item list-group-item-action active" aria-current="true">
-                        Akun saya
-                    </a>
-                    <a href="./pesananPenyewa.html" class="list-group-item list-group-item-action">Pesanan Saya</a>
-                    <a href="../index.html" class="list-group-item list-group-item-action">Logout</a>
+                    <a href="./dashboardPemilik.html" class="list-group-item list-group-item-action active"
+                    aria-current="true">
+                    <i class="bi bi-speedometer2"></i> Dashboard
+                </a>
+                <a href="./tambahkanProduk.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-building-add"></i> Tambahkan Produk</a>
+                <a href="./profilPedagang.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-person-badge"></i> Profile</a>
+                <a href="../index.html" class="list-group-item list-group-item-action"><i
+                        class="bi bi-box-arrow-left"></i> Logout</a>
                 </div>
             </div>
 
-            <div class="col-9">
-                <div class="card">
+            <div class="col-5">
+                <!-- card kinerja kost -->
+                <div class="card mb-3" style="border: 2px solid #749BC2; border-radius: 8px;">
+                    <div class="card-body">
+                        <h3 class="fw-semibold">Tingkatkan Kinerja Toko</h3>
+                        <p>Lengkapi Toko anda dengan fitur berikut</p>
+
+                        <!-- Card Kosan Tech Innovator Tour -->
+                        <div class="card mb-3">
+                            <div class="d-flex align-items-center">
+                                <img class=" mx-2 my-2" src="../assets/images/pemilikKost/contact_mail.svg" alt=""
+                                    style="padding: 10px; border: 2px solid #4682A9; border-radius: 100%;">
+
+                                <div class="">
+                                    <h5 class="mt-3 mb-0">Kosan Tech Innovator Tour</h5>
+                                    <p>Sewa Jasa Foto Professional</p>
+                                </div>
+                                <div class="ms-auto me-4">
+                                    <img src="../assets/images/pemilikKost/expand_less.svg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Card KosanTech Innovators Foto -->
+                        <div class="card">
+                            <div class="d-flex align-items-center">
+                                <img class=" mx-2 my-2" src="../assets/images/pemilikKost/person_search.svg" alt=""
+                                    style="padding: 10px; border: 2px solid #4682A9; border-radius: 100%;">
+
+                                <div class="">
+                                    <h5 class="mt-3 mb-0">KosanTech Innovators Foto</h5>
+                                    <p>Sewa Jasa Foto Professional</p>
+                                </div>
+                                <div class="ms-auto me-4">
+                                    <img src="../assets/images/pemilikKost/expand_less.svg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- card Mengelola Property> -->
+                <div class="card" style="border: 2px solid #749BC2; border-radius: 8px;">
+                    <div class="card-body">
+                        <h3 class="fw-semibold">Waktunya mengelola Produk</h3>
+                        <p>Maksimalkan properti anda dengan manajemen dari Kosan Tech Innovators</p>
+
+                        <!-- Card Tambah Property -->
+                        <div class="card mb-3">
+                            <div class="d-flex align-items-center">
+                                <img class=" mx-2 my-2" src="../assets/images/pemilikKost/contact_mail.svg" alt=""
+                                    style="padding: 10px; border: 2px solid #4682A9; border-radius: 100%;">
+
+                                <div class="">
+                                    <h5 class="mt-3 mb-0">Tambah Produk</h5>
+                                    <p>Tambahkan produk anda</p>
+                                </div>
+                                <div class="ms-auto me-4">
+                                    <img src="../assets/images/pemilikKost/expand_less.svg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Card Pusat Bantuan -->
+                        <div class="card">
+                            <div class="d-flex align-items-center">
+                                <img class=" mx-2 my-2" src="../assets/images/pemilikKost/person_search.svg" alt=""
+                                    style="padding: 10px; border: 2px solid #4682A9; border-radius: 100%;">
+
+                                <div class="">
+                                    <h5 class="mt-3 mb-0">Pusat Bantuan</h5>
+                                    <p>Info bantuan seputar KosanTech Innovators</p>
+                                </div>
+                                <div class="ms-auto me-4">
+                                    <img src="../assets/images/pemilikKost/expand_less.svg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <!-- Card Laporan Statistik -->
+                <div class="card" style="border: 2px solid #749BC2; border-radius: 8px;">
                     <div class="card-body">
                         <div class="">
-                            <h3>Profil Saya</h3>
-                            <p>Kelola informasi profil Anda untuk mengontrol, melindungi dan mengamankan akun</p>
+                            <h4 class="fw-bold mb-0">Laporan Statistik</h4>
+                            <p>Ringkasan performa produk Anda.</p>
                         </div>
-                        <div class="">
-                            <p>Username</p>
-                            <div class="card col-sm-6">
-                                <div class="card-body">
-                                    jess96
-                                </div>
-                              </div>
+                        <div class="d-flex justify-content-center">
+                            <img src="../assets/images/pemilikKost/Rectangle 1986.png" alt="">
                         </div>
-                        <div class="" style="margin-top: 10px;">
-                            <p>Nama Lengkap</p>
-                            <div class="card col-sm-6">
-                                <div class="card-body">
-                                    Jesika Baputri
-                                </div>
-                              </div>
-                        </div>
-                        <div class="" style="margin-top: 10px;">
-                            <p>Alamat</p>
-                            <div class="card col-sm-6">
-                                <div class="card-body">
-                                    Santiago Party
-                                </div>
-                              </div>
-                        </div>
-                        <div class="" style="margin-top: 10px;">
-                            <p>Email</p>
-                            <div class="card col-sm-5">
-                                <div class="card-body">
-                                    jesscp@gmail.com
-                                </div>
-                              </div>
-                              </div>  
-                        <div class="" style="margin-top: 10px;">
-                            <p>No Handphone</p>
-                            <div class="col-sm-6">
-                                <div class="">
-                                    0878-8550-9723
-                                </div>
-                            </div> 
-                            </div>     
-                        <div class="" style="margin-top: 10px;">
-                            <p>Password</p>
-                            <div class="col-sm-6">
-                                <div class="">
-                                    .......
-                                </div>
-                            </div> 
-                            </div>     
-                        <div class="" style="margin-top: 10px;">
-                            <p>Jenis Kelamin</p>
-                            <div class="">
-                            <input type="radio" name="jenis Kelamin" class="col-1">
-                            <label for="Laki-Laki">Laki-Laki</label>
-                            <input type="radio" name="jenis Kelamin" class="col-1">
-                            <label for="wanita">Wanita</label><br>
-                            </div>
-                        </div>
-
-                                                     
-                        </div>                              
+                        <div class="my-3">
+                            <h5 class="fw-semibold d-flex justify-content-center">Data produk belum ada</h5>
+                            <p class="d-flex justify-content-center px-5">Anda belum punya produk yang dikelola.
+                                Data produk yang dikelola akan muncul disini</p>
                         </div>
                     </div>
                 </div>
