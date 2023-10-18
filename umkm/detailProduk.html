@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <style>
+        .bg-section {
+            width: 100%;
+            height: 100vh;
+            z-index: -99;
+            background: linear-gradient(291deg, #7ad7ff 0%, rgba(197.19, 242.45, 199, 0) 100%);
+        }
+
+        .bg-image {
+            width: 849px;
+            height: 620px;
+            /* Atur posisi latar belakang ke pojok kanan bawah */
+            background-position: right;
+            /* Sesuaikan ukuran latar belakang sesuai kebutuhan Anda */
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .toggle-password {
+            float: right;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: -30px;
+        }
+
+        .icon-google {
+            float: left;
+            cursor: pointer;
+            margin-left: 10px;
+            width: 32px;
+            height: 32px;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <div class="ms-4 d-flex">
+                <img class="ms-5" src="../assets/icons/Logo.svg" width="53" height="51" alt="">
+                <a class="nav-link link link ms-3 mt-1" href="../index.html"><span class="fw-bold"
+                        style="color:#4682A9;">KosanTech</span><span class="fw-semibold" style="color:#749BC2;">
+                        Innovators</span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item active">
+                        <a class="nav-link link fw-semibold" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link fw-semibold" href="/kost/kost.html">Cari Kos</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown">
+                            <a class=" nav-link fw-semibold link dropdown-toggle" type="button" id="layanan"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <span> Layanan Kami</span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="layanan">
+                                <li><a class="dropdown-item link" href="#">Fasilitas Rumah</a></li>
+                                <li><a class="dropdown-item link" href="#">Makanan</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link fw-semibold" href="#">Kontak</a>
+                    </li>
+                </ul>
+                <form class="d-flex me-5">
+                    <a class="login" href="/loginTo.html">Masuk</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="">
+            <div class="row">
+                <h1 class="fw-bold">AC Sharp 1 PK Standar</h1>
+                <div class="col-8">
+                    <img src="../assets/images/fasilitasRumah/detailProduk/detail1.png" style="width: 100%;" alt="">
+                </div>
+
+                <div class="col-4">
+                    <img class="mb-3" src="../assets/images/fasilitasRumah/detailProduk/detail2.png" style="width: 100%;" alt="">
+                    <img src="../assets/images/fasilitasRumah/detailProduk/detail3.png" style="width: 100%;" alt="">
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-8">
+                    <article>
+                        Spesifikasi :<br>
+                        <ul>
+                            <li>9000 Btu/h - Bisa mendinginkan ruangan sampai 16m2.</li>
+                            <li>Garansi 3 Tahun Sparepart, 10 Tahun Kompresor.</li>
+                            <li>Garuda Wing Airflow - Memberikan hembusan udara langsung yang lebih kuat menyebar keseluruh ruangan.</li>
+                            <li>Super Jet Mode - AC beroperasi pada kecepatan “Extra High” untuk mendinginkan ruangan dengan cepat.</li>
+                            <li>Coanda Airflow with New Big Louver - Hembusan udara tidak kena langsung dengan dingin yang merata.</li>
+                            <li>Sleep Mode – Dark LED - Fitur otomatis yang menyesuaikan temperature saat tidur dengan lampu yang redup nyaman saat tidur yang menunjukkan mode operasi pada AC.</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="col-4">
+                    <div class="card py-4">
+                        <div style="display: flex; align-items: center;">
+                            <img src="../assets/images/fasilitasRumah/detailProduk/detail4.png" width="120px" height="100px" style="margin-right: 15px; padding-left: 15px;" alt="">
+                            <h4>hedwynbusyaery</h4>
+                        </div>
+                        <h3 class="fw-bold mx-5">Rp. 3,3950,000</h3>
+                        <div class="mx-4 d-flex justify-content-between mt-3">
+
+                        </div>
+                        <a class="btn btn-sm btn-transparent border mt-3 mx-5" href="" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal"><img src="../assets/icons/message.svg" alt=""> Tanya
+                            Pemilik</a>
+                        <a class="btn btn-sm btn-primary mt-3 mx-5 fs-6 fw-bold" style="background-color: #749BC2;"
+                            href="./pembayaranKost.html">Beli Sekarang</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div> -->
+                        <div class="modal-body">
+                            <div class="card border-0">
+                                <div class="card-body">
+                                    <label class="border border-dark border-1" style="width: 100%;" for=""><img
+                                            src="../assets/images/AC.png" class="ms-2 rounded-circle " width="50"
+                                            height="50" alt=""> <span class="ms-3 fw-bold">Hanjar</span>
+                                    </label>
+
+                                    <!-- ISI PESAN -->
+                                    <div class="message mt-4" style="height: 500px;">
+                                        <div class="my-chat mt-2 d-flex justify-content-end"
+                                            style="margin-left: auto !important;">
+                                            <div class="chat1">
+                                                <label class="bg-success px-2 py-1 rounded-pill text-white" for="">Masih
+                                                    Ada Yang Kosong ?</label>
+                                            </div>
+                                        </div>
+                                        <div class="receiveChat mt-2 d-flex justify-content-start">
+                                            <div class="chat1">
+                                                <label class="bg-info text-white px-2 py-1 rounded-pill"
+                                                    for="">Masih</label>
+                                            </div>
+                                        </div>
+                                        <div class="my-chat mt-2 d-flex justify-content-end"
+                                            style="margin-left: auto !important;">
+                                            <div class="chat1">
+                                                <label class="bg-success px-2 py-1 rounded-pill text-white" for="">Oke
+                                                    Sip</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Input Pesan -->
+                                    <div class="inputPesan fixed">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control border-dark"
+                                                style="padding: 10px; width: 80%;" placeholder="Masukan Pesan...">
+                                            <span class="input-group-text bg-success text-light border-dark"
+                                                id="basic-addon2">Kirim</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" mt-5" style="background-color: #749BC2; height: 250px;">
+        <div class="container ">
+            <div class="row pt-5">
+                <div class="col-3">
+                    <div class="text-left">
+                        <a href=""> <img width="140" src="../assets/images/Logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="text-white">Kebijakan</h4>
+                    <div class="mt-3">
+                        <a class="text-decoration-none text-white d-block" href="">Kebijakan Privasi</a>
+                        <a class="text-decoration-none text-white d-block mt-2" href="">Syarat dan Ketentuan Umum</a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="text-white">Akun</h4>
+                    <div class="mt-3">
+                        <a class="text-decoration-none text-white d-block" href="">Akun Saya</a>
+                        <a class="text-decoration-none text-white d-block mt-2" href="">Lupa Sandi</a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4 class="text-white">Hubungi Kami</h4>
+                    <div class="mt-3">
+                        <a class="text-decoration-none text-white d-block" href="">myAccount@gmail.com</a>
+                        <a class="text-decoration-none text-white d-block mt-2" href="">081216161941</a>
+                    </div>
+                    <div class="d-inline mt-1">
+                        <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-facebook"></i></a>
+                        <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-twitter"></i></a>
+                        <a class="fs-4 text-dark me-3" href=""> <i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <p class="text-center fs-5"><i class="bi bi-c-circle"></i> Copyright KosanTechInnovators 2023. All right
+                    reserved</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
