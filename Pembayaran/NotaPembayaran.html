@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota Pembayaran</title>
+</head>
+<body>
+    
+
+    
+    <script>
+        // Fungsi untuk mengambil nilai parameter dari URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Mengambil nilai "data" dari URL
+        var dataValue = getParameterByName("bahasa1");
+        if (dataValue) {
+            console.log("Nilai 'data' dari URL: " + dataValue);
+            // Lakukan sesuatu dengan nilai "data" di sini
+        }
+    </script>
+</body>
+</html>
